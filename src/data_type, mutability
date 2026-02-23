@@ -1,0 +1,4 @@
+fn main() {
+    let mut num:u8 = 15;                       // This number is mutable for better readibility
+    println!("The num is {}",num);
+}
