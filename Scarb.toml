@@ -1,0 +1,13 @@
+[package]
+name = "cairo_starknet_learning"
+version = "0.1.0"
+edition = "2024_07"
+
+[dependencies]
+starknet = ">=2.6.3"
+
+[[target.starknet-contract]]
+sierra = true
+
+[dev-dependencies]
+cairo_test = "2.6.3"
