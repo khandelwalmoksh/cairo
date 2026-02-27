@@ -4,5 +4,5 @@ fn main () {
     arr.append(1);
     arr.append(2);
 
-    println!("array is {}:?}", arr);
+    println!("array is {:?}", arr);
 }

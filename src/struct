@@ -1,0 +1,13 @@
+#[derive(Drop)]           // compulsory to start with this
+struct User {
+    name:ByteArray, // ByteArray to store strings
+    id:u16,
+}
+
+fn main(){
+    let user1 = User {
+        name:"Moksh",
+        id:16
+    };
+    println!("User name {} User id {}", user1.name, user1.id);
+}
