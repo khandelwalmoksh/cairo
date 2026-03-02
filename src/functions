@@ -1,0 +1,8 @@
+fn main() {
+    let num = print_num(7);
+    println!(" {}", num);
+}
+
+fn print_num(num:u8) -> u8 {
+    num     //this is sufficient to return the num's value(quite common)
+}
