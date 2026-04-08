@@ -1,0 +1,22 @@
+pub trait Eat {
+    fn eat_food(self:@Person);
+}
+
+impl PersonEatingHabbits of Eat {
+    fn eat_food(self:@Person);
+
+    println!("{} eats food", self.name);
+}
+
+#[derive(Drop)]
+
+pub struct Person {
+    name:ByteArray
+}
+
+fn main(){
+    let person = Person{
+        name:"Moksh"
+    };
+    person.eat_food();
+}
