@@ -1,18 +1,18 @@
-pub trait Eat {
-    fn eat_food(self:@Person);
+pub trait Eat<T> {
+    fn eat_food(self:@T);
 }
 
-pub trait EatA {
-    fn eat_food(self:@Animal);
-}
+// pub trait EatA {
+//     fn eat_food(self:@Animal);
+//}
 
-impl PersonEatingHabbits of Eat {
+impl PersonEatingHabbits of Eat<Person> {
     fn eat_food(self:@Person);
 
     println!("{} eats food", self.name);
 }
 
-impl AnimalEatingHabbits of EatA {
+impl AnimalEatingHabbits of Eat<Animal> {
     fn eat_food(self:@Animal);
 
     println!("{} eats food", self.name);
