@@ -1,0 +1,6 @@
+fn main(){
+    let arr1:Array<u8> = array![1,2,3];
+    let arr2:Array<u8> = arr1; // Oweneship of arr1 is moved to arr2, arr1 can no longer be used
+
+    println!{"arr2= {:?}", arr2};
+}
