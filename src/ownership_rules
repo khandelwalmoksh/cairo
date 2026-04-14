@@ -1,0 +1,21 @@
+const GLOBAL_CONST: u8 = 100;
+
+fn main(){
+    let outside_variable = 5;
+    {
+        let inside_variable = 10;
+        println!("Inside variable: {}", inside_variable);
+        println!("Outside variable: {}", outside_variable);
+    }
+    // 'inside_variable' goes out of scope here
+
+    // Uncommenting the below llne would result in compiler error becaude 'inside_variable' is not accessible outside its scope
+    // println!("Inside variable: {}", inside_variable);
+    
+    println!("Outside variable: {}", outside_variable);
+    println!("Global variable: {}", GLOBAL_CONST);
+}
+
+fn main(){
+    println!("Global variable: {}", GLOBAL_CONST);
+}
