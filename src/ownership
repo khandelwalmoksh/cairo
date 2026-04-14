@@ -4,3 +4,10 @@ fn main(){
 
     println!{"arr2= {:?}", arr2};
 }
+
+fn main(){
+    let arr1:Array<u8> = array![1,2,3];
+    let arr2:Array<u8> = arr1.clone(); 
+
+    println!{"arr2= {:?}", arr2};
+}
