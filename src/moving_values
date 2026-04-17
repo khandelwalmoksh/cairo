@@ -1,0 +1,13 @@
+fn foo(mut arr2: Array<u128>) {
+    let len = arr2.len();
+    println!("Array length: {len}");
+}
+
+fn main() {
+    let mut arr = Array<u128> = array![];
+    arr.append(1);
+    arr.append(2);
+    arr.append(3);
+
+    foo(arr); // ownership of `arr` is moved/transferred to `arr2`
+}
