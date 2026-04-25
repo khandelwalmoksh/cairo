@@ -5,7 +5,7 @@ struct Rectangle {
 }
 
 fn main(){
-    let mut rect 1 = Rectangle (height:3, width: 10);
+    let mut rect1 = Rectangle (height:3, width: 10);
     swap(ref rect1); //here, we're passing the reference of rect1 to the swap function, so rect1 is not moved, but we can still modify its fields through the reference.
     println!("height: {}, width: {}", rect1.height, rect1.width) 
 }

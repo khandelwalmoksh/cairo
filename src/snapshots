@@ -1,0 +1,15 @@
+fn main(){
+    let mut arr1: Array<u128> = array![]
+    let first_snapshot = @arr1;  //first snapshot at array length zero
+    arr1.append(1);
+    let second_snapshot = @arr1;  //second snapshot at array length one
+
+    let arr1_first_snapshot_length = calculate_length(first_snapshot);
+    let arr1_second_snapshot_length = calculate_length(second_snapshot);
+
+    println!("arr1_first_snapshot_length {}, arr1_second_snapshot_length {}", arr1_first_snapshot_length, arr1_second_snapshot_length);
+}
+
+fn calculate_length(arr: Array<u128>) -> usize {
+    arr.len()
+}
