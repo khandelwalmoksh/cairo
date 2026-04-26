@@ -1,0 +1,17 @@
+#[derive(Drop)]
+struct Rectangle {
+    height: u64,
+    width: u64,
+}
+
+fn main() {
+    let rect = Rectangle {height: 3, width: 10};
+    let area = calculate_area(@rect);
+    println!("Area: {}", area);
+}
+
+fn calculate_area(rect: @Rectangle) -> u64 {
+    //here Desnap only possible if the type is copyable, which is the case of u64
+    
+    *rect.height * *rect.width  //here '*' is used for both multiplying the hieght and width and for desnapping the snapshots
+}
